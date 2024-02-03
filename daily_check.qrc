@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/blank_128.png</file>
+        <file>images/browsers/chrome_32.png</file>
+        <file>images/browsers/edge_32.png</file>
+        <file>images/browsers/brave_32.png</file>
+        <file>images/dailycheck_128.png</file>
+    </qresource>
+</RCC>
