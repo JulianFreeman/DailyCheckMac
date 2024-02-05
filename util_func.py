@@ -50,7 +50,7 @@ def get_mac_installed_software() -> dict[str, str]:
     def search(path: Path):
         for c in path.glob("*"):
             if str(c).endswith(".app"):
-                if c.is_dir():
+                if c.is_dir() and (c / "Contents" / "Info.plist").exists():
                     all_soft.append(c)
             elif c.is_dir():
                 search(c)
@@ -61,6 +61,6 @@ def get_mac_installed_software() -> dict[str, str]:
     all_soft.sort(key=lambda x: x.name.lower())
 
     return {
-        app.name: get_app_icon_path(Path(app) / "Contents" / "Info.plist")
+        app.name: get_app_icon_path(app / "Contents" / "Info.plist")
         for app in all_soft
     }

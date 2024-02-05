@@ -7,7 +7,7 @@ from mw_dailycheck import MwDailyCheck
 
 import daily_check_rc
 
-version = (1, 0, 0)
+version = (1, 0, 1)
 
 ORG_NAME = "JnPrograms"
 APP_NAME = "DailyCheck"
